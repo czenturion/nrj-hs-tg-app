@@ -8,7 +8,6 @@ export const useLanguage = () => {
     const tg = window.Telegram.WebApp
 
     if (tg) {
-      // Получаем язык из Telegram
       const userLang = tg.initDataUnsafe.user?.language_code || 'en'
       const initialLanguage = userLang === 'ru' ? 'ru' : 'en'
 
@@ -30,7 +29,7 @@ export const useLanguage = () => {
         i18n.off('languageChanged', handleLanguageChange)
       }
     }
-  }, [i18n.language])
+  }, [])
 
   const toggleLanguage = () => {
     const newLanguage = language === 'ru' ? 'en' : 'ru'
