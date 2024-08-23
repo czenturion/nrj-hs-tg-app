@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useLanguage } from './hooks/useLanguage'
+import { useLanguage } from './shared/hooks/useLanguage'
 import { ZodiacGrid } from './components/ZodiacGrid'
 import { ZodiacDescription } from './components/ZodiacDescription'
 import { fetchHoroscope } from './api/horoscope'
