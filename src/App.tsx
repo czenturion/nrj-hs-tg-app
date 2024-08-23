@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useLanguage } from './hooks/useLanguage'
 import { ZodiacGrid } from './components/ZodiacGrid'
 import { ZodiacDescription } from './components/ZodiacDescription'

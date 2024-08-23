@@ -1,9 +1,9 @@
 import React from 'react'
-import { useLanguage } from '../hooks/useLanguage'
 import { useTranslation } from 'react-i18next'
+import { useLanguage } from '../hooks/useLanguage'
 
 const LanguageSwitcher: React.FC = () => {
-  const { language, toggleLanguage } = useLanguage()
+  const { toggleLanguage } = useLanguage()
   const { t } = useTranslation()
 
   return (
@@ -11,7 +11,7 @@ const LanguageSwitcher: React.FC = () => {
       className="button toggle-language"
       onClick={ toggleLanguage }
     >
-      {t('btn.lang')}
+      { t('btn.lang') }
     </button>
   )
 }
