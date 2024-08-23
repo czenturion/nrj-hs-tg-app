@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { useLanguage } from './hooks/useLanguage'
+import { ZodiacGrid } from './components/ZodiacGrid'
+import { ZodiacDescription } from './components/ZodiacDescription'
+import { fetchHoroscope } from './api/horoscope'
+import './styles/styles.css'
 
-function App() {
+const App: React.FC = () => {
+  const { language, toggleLanguage } = useLanguage()
+  const [selectedSign, setSelectedSign] = useState<string | null>(null)
+  const [description, setDescription] = useState<string | null>(null)
+
+  const handleSelectSign = async (sign: string) => {
+    setSelectedSign(sign)
+    const horoscope = await fetchHoroscope(sign, language)
+    setDescription(horoscope)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {!selectedSign ? (
+        <ZodiacGrid onSelect={handleSelectSign} />
+      ) : (
+        <ZodiacDescription
+          sign={selectedSign}
+          description={description || ''}
+          onBack={() => {
+            setSelectedSign(null)
+            setDescription(null)
+          }}
+        />
+      )}
+      <button className="button toggle-language" onClick={toggleLanguage}>
+        {language === 'ru' ? 'Switch to English' : 'Переключить на русский'}
+      </button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

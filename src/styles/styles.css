@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.app {
+    max-width: 433px;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.zodiac-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.zodiac-item {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.zodiac-item:hover {
+    transform: scale(1.05);
+}
+
+.zodiac-icon {
+    font-size: 30px;
+}
+
+.zodiac-sign {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.zodiac-period {
+    font-size: 14px;
+    color: #555;
+}
+
+.zodiac-description {
+    padding: 20px;
+}
+
+.toggle-language {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 500px) {
+    .zodiac-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zodiac-item {
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
