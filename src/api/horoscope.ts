@@ -1,4 +1,4 @@
-export const fetchHoroscope = async (sign: string, language: 'ru' | 'en') => {
+export const fetchHoroscope = async (sign: string, language: string) => {
   try {
     const response = await fetch('https://poker247tech.ru/get_horoscope/', {
       method: 'POST',
