@@ -12,10 +12,6 @@ export const fetchHoroscope = async (sign: string, language: string) => {
       })
     })
 
-    if (!response.ok) {
-      console.log(response.body)
-    }
-
     const data = await response.json()
     return data.horoscope || 'No description available'
 

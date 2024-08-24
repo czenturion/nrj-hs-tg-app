@@ -10,6 +10,8 @@ interface ZodiacDescriptionProps {
 export const ZodiacDescription: React.FC<ZodiacDescriptionProps> = ({ sign, description, onBack }) => {
   const { t } = useTranslation()
 
+
+
   return (
     <div className="zodiac-description">
       <h2>{ t(sign) }</h2>

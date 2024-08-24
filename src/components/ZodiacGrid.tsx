@@ -22,6 +22,7 @@ export const ZodiacGrid: React.FC<ZodiacGridProps> = ({ onSelect }) => {
           />
         )) }
       </div>
+
       <LanguageSwitcher/>
     </div>
   )
