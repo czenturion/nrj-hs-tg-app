@@ -13,7 +13,7 @@ body {
     max-width: 433px;
     text-align: center;
     padding: 20px;
-    margin: 10px 20px;
+    margin: 20px 50px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -77,13 +77,21 @@ body {
     background-color: #0056b3;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+    .app {
+        margin: 0 20px;
+    }
+
     .zodiac-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .zodiac-item {
         padding: 10px;
+    }
+
+    .zodiac-description {
+        padding: 0 20px;
     }
 
     .button {

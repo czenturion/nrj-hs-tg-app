@@ -4,9 +4,10 @@ import { ZodiacGrid } from './components/ZodiacGrid'
 import { ZodiacDescription } from './components/ZodiacDescription'
 import { fetchHoroscope } from './api/horoscope'
 import './styles/styles.css'
+import LanguageSwitcher from './components/LanguageSwitcher'
 
 const App: React.FC = () => {
-  const { language } = useLanguage()
+  const { language, toggleLanguage } = useLanguage()
   const [selectedSign, setSelectedSign] = useState<string | null>(null)
   const [description, setDescription] = useState<string | null>(null)
 
@@ -30,6 +31,7 @@ const App: React.FC = () => {
           } }
         />
       ) }
+      <LanguageSwitcher toggleLanguage={ toggleLanguage }/>
     </div>
   )
 }

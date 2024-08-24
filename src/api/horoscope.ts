@@ -16,7 +16,7 @@ export const fetchHoroscope = async (sign: string, language: string) => {
     return data.horoscope || 'No description available'
 
   } catch (e) {
-    console.error('Error fetching horoscope:', e)
+    console.error('Error fetching horoscope: ', e)
     return 'Error fetching horoscope'
   }
 }

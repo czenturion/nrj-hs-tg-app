@@ -1,9 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { useLanguage } from '../shared/hooks/useLanguage'
 
-const LanguageSwitcher: React.FC = () => {
-  const { toggleLanguage } = useLanguage()
+interface LanguageSwitcherProps {
+  toggleLanguage: () => void
+}
+
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ toggleLanguage }) => {
   const { t } = useTranslation()
 
   return (
