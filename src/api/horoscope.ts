@@ -1,4 +1,4 @@
-export const fetchHoroscope = async (sign: string, language: string) => {
+export const fetchHoroscope = async (sign: string | null, language: string) => {
   try {
     const response = await fetch('https://poker247tech.ru/get_horoscope/', {
       method: 'POST',
@@ -13,7 +13,7 @@ export const fetchHoroscope = async (sign: string, language: string) => {
     })
 
     const data = await response.json()
-    return data.horoscope || 'No description available'
+    return data.horoscope as string || 'No description available'
 
   } catch (e) {
     console.error('Error fetching horoscope: ', e)

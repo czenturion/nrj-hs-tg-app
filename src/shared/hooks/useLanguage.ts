@@ -16,6 +16,7 @@ export const useLanguage = () => {
 
   const toggleLanguage = async () => {
     const newLanguage = language === 'ru' ? 'en' : 'ru'
+    console.log(newLanguage)
 
     await i18n.changeLanguage(newLanguage)
     setLanguage(newLanguage)

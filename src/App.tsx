@@ -31,7 +31,12 @@ const App: React.FC = () => {
           } }
         />
       ) }
-      <LanguageSwitcher toggleLanguage={ toggleLanguage }/>
+      <LanguageSwitcher
+        language={ language }
+        toggleLanguage={ toggleLanguage }
+        selectedSign={ selectedSign }
+        setDescription={ setDescription }
+      />
     </div>
   )
 }
