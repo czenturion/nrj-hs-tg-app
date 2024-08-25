@@ -10,6 +10,9 @@ export const useLanguage = () => {
 
     if (tgLanguageCode) {
       setLanguage(tgLanguageCode)
+      i18n.changeLanguage(tgLanguageCode)
+    } else {
+      console.warn('No language code found in Telegram user data')
     }
   }, [])
 
