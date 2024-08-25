@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import i18n from '../../i18n'
 
 export const useLanguage = () => {
-  const [language, setLanguage] = useState(() => 'en')
+  const [language, setLanguage] = useState(() => 'ru')
 
   useEffect(() => {
     const tg = window.Telegram?.WebApp

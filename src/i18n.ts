@@ -14,8 +14,8 @@ i18n
         translation: ruTranslations
       }
     },
-    lng: 'en', // Язык по умолчанию
-    fallbackLng: 'en', // Язык по умолчанию, если перевод не найден
+    lng: 'ru', // Язык по умолчанию
+    fallbackLng: 'ru', // Язык по умолчанию, если перевод не найден
     interpolation: {
       escapeValue: false
     }

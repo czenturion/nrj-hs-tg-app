@@ -13,7 +13,7 @@ body {
     max-width: 433px;
     text-align: center;
     padding: 20px;
-    margin: 20px 50px;
+    margin: 10px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -79,7 +79,7 @@ body {
 
 @media screen and (max-width: 500px) {
     .app {
-        margin: 0 20px;
+        margin: 60px 20px;
     }
 
     .zodiac-grid {
